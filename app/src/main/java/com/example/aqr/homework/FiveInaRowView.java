@@ -93,10 +93,14 @@ public class FiveInaRowView extends View {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         int action = event.getAction();
-        if(action ==  MotionEvent.ACTION_DOWN){
+        if(action ==  MotionEvent.ACTION_UP){
             int x = (int) event.getX();
             int y = (int) event.getY();
-            Point p = new Point(x, y);
+            Point p = getPoint(x,y);
+            if(downBlackPoint.contains(p)||downWhitePoint.contains(p)){
+                return false;
+
+            }
             if(isWhite){
                 downWhitePoint.add(p);
             }
@@ -105,10 +109,14 @@ public class FiveInaRowView extends View {
             }
             invalidate();
             isWhite = !isWhite;
-            return true;
-        }
-        return super.onTouchEvent(event);
 
+        }
+        return true;
+
+    }
+
+    public Point getPoint(int x, int y){
+        return new Point((int)(x/mLineHeight), (int)(y/mLineHeight));
     }
 
     @Override
@@ -127,5 +135,11 @@ public class FiveInaRowView extends View {
             canvas.drawLine(y, startX, y, endX, mPaint);
         }
     }
+    private  void drawStone(Canvas canvas) {
+        for(int i = 0; i < downWhitePoint.size(); i++){
+
+        }
+    }
+
 
 }
