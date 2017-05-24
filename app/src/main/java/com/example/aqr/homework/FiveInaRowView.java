@@ -25,11 +25,13 @@ public class FiveInaRowView extends View {
     private Bitmap mWhiteStone;
     private Bitmap mBlackStone;
 
-    private float ratio = 4*1.0f/5;//3*1.0f/4
+    private float ratio = 3*1.0f/4;
     private List<Point> downWhitePoint = new ArrayList<>();
     private List<Point> downBlackPoint = new ArrayList<>();
 
     private boolean isWhite = false;
+    private boolean isGameOver = false;
+    private boolean isWhiteWin = false;
 
     private Paint mPaint = new Paint();
     public FiveInaRowView(Context context) {
@@ -92,6 +94,7 @@ public class FiveInaRowView extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        if(isGameOver) return false;
         int action = event.getAction();
         if(action ==  MotionEvent.ACTION_UP){
             int x = (int) event.getX();
@@ -107,8 +110,9 @@ public class FiveInaRowView extends View {
             else{
                 downBlackPoint.add(p);
             }
-            invalidate();
             isWhite = !isWhite;
+            invalidate();
+
 
         }
         return true;
@@ -119,10 +123,22 @@ public class FiveInaRowView extends View {
         return new Point((int)(x/mLineHeight), (int)(y/mLineHeight));
     }
 
+    private void checkGameOver(){
+        if(isFiveInRow()){
+
+            isGameOver = true;
+        }
+    }
+    private boolean isFiveInRow( ){
+
+        return false;
+    }
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         drawBroad(canvas);
+        drawStone(canvas);
     }
     private void drawBroad(Canvas canvas){
         int w = mViewWidth;
@@ -137,6 +153,19 @@ public class FiveInaRowView extends View {
     }
     private  void drawStone(Canvas canvas) {
         for(int i = 0; i < downWhitePoint.size(); i++){
+            Point whitePoint = downWhitePoint.get(i);
+            int pointX = (int) ((whitePoint.x+(1-ratio)/2)*mLineHeight);
+            int pointY = (int) ((whitePoint.y+(1-ratio)/2)*mLineHeight);
+            canvas.drawBitmap(mWhiteStone, pointX, pointY, null);
+
+
+        }
+        for(int i = 0; i < downBlackPoint.size(); i++){
+            Point blackPoint = downBlackPoint.get(i);
+            int pointX = (int) ((blackPoint.x+(1-ratio)/2)*mLineHeight);
+            int pointY = (int) ((blackPoint.y+(1-ratio)/2)*mLineHeight);
+            canvas.drawBitmap(mBlackStone, pointX, pointY, null);
+
 
         }
     }
