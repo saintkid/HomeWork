@@ -1,4 +1,4 @@
-package com.example.aqr.homework;
+package com.example.aqr.homework.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -10,6 +10,9 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.example.aqr.homework.R;
+
+import java.security.cert.PolicyNode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -124,21 +127,147 @@ public class FiveInaRowView extends View {
     }
 
     private void checkGameOver(){
-        if(isFiveInRow()){
 
+        if(isFiveInRow(downWhitePoint)||isFiveInRow(downBlackPoint)){
+            isWhiteWin = isFiveInRow(downWhitePoint);
             isGameOver = true;
         }
     }
-    private boolean isFiveInRow( ){
+    private boolean isFiveInRow(List<Point> points){
+        for(Point p:points){
+            int x = p.x;
+            int y = p.y;
+            if(isHorizonFive(x, y, points)||isVerticalFive(x, y, points)||isLeftDiagonalFive(x, y, points)||isRightDiagonalFive(x, y, points)) {
+                return true;
+            }
+        }
 
         return false;
     }
+    private boolean isHorizonFive(int x, int y, List<Point> points){
+        int count = 1;
+        for(int i = 1; i < 5;i++) {
+            if(points.contains(new Point(x-i,y))){
+                count++;
+            }
+            else{
+                break;
+            }
+        }
+        if(count == 5){
+            return true;
+        }
+        for(int i = 1; i < 5;i++) {
+            if(points.contains(new Point(x+i,y))){
+                count++;
+            }
+            else{
+                break;
+            }
+        }
+        if(count == 5){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    private boolean isVerticalFive(int x, int y, List<Point> points) {
+        int count = 1;
+        for(int i = 1; i < 5; i++){
+            if(points.contains(new Point(x,y-i))){
+                count++;
+            }
+            else{
+                break;
+            }
+        }
+        if(count == 5){
+            return true;
+        }
+        for(int i = 1; i < 5; i++){
+            if(points.contains(new Point(x,y+i))){
+                count++;
+            }
+            else{
+                break;
+            }
+        }
+        if(count == 5){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    private boolean isRightDiagonalFive(int x, int y, List<Point> points) {
+        int count = 1;
+        for(int i = 1; i < 5; i++){
+            if(points.contains(new Point(x-i,y-i))){
+                count++;
+            }
+            else{
+                break;
+            }
+        }
+        if(count == 5){
+            return true;
+        }
+        for(int i = 1; i < 5; i++){
+            if(points.contains(new Point(x+i,y+i))){
+                count++;
+            }
+            else{
+                break;
+            }
+        }
+        if(count == 5){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    private boolean isLeftDiagonalFive(int x, int y, List<Point> points) {
+        int count = 1;
+        for(int i = 1; i < 5; i++){
+            if(points.contains(new Point(x+i,y-i))){
+                count++;
+            }
+            else{
+                break;
+            }
+        }
+        if(count == 5){
+            return true;
+        }
+        for(int i = 1; i < 5; i++){
+            if(points.contains(new Point(x-i,y+i))){
+                count++;
+            }
+            else{
+                break;
+            }
+        }
+        if(count == 5){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         drawBroad(canvas);
         drawStone(canvas);
+        checkGameOver();
     }
     private void drawBroad(Canvas canvas){
         int w = mViewWidth;

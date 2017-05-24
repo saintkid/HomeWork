@@ -9,7 +9,7 @@
     android:background="@drawable/ic_bg"
     tools:context="com.example.aqr.homework.MainActivity">
 
-    <com.example.aqr.homework.FiveInaRowView
+    <com.example.aqr.homework.view.FiveInaRowView
         android:layout_centerInParent="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
