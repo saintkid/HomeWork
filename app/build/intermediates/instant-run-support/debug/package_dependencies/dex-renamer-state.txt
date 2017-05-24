@@ -1,0 +1,7 @@
+#Wed May 24 09:12:05 CST 2017
+base.0=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_3a909bb27c0f6fd478517d79ab08dd1bf6f4332e
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\constraint-layout-solver-1.0.1_4745605c92b0fa4dbd95b14fa9febea6d1027e69\\classes.dex
+base.1=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\constraint-layout-solver-1.0.1_4745605c92b0fa4dbd95b14fa9febea6d1027e69
+file.0=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_3a909bb27c0f6fd478517d79ab08dd1bf6f4332e\\classes.dex
