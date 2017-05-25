@@ -51,6 +51,7 @@ int drawable ic_stone_white 0x7f020002
 int id all 0x7f080005
 int id basic 0x7f080006
 int id chains 0x7f080007
+int id fiveinrow 0x7f080009
 int id none 0x7f080008
 int id packed 0x7f080003
 int id parent 0x7f080000

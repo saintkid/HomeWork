@@ -471,6 +471,7 @@ containing a value of this type.
         public static final int all=0x7f080005;
         public static final int basic=0x7f080006;
         public static final int chains=0x7f080007;
+        public static final int fiveinrow=0x7f080009;
         public static final int none=0x7f080008;
         public static final int packed=0x7f080003;
         public static final int parent=0x7f080000;
