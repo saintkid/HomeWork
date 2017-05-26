@@ -28,6 +28,10 @@ public class CheckFiveInRow {
 
     private boolean checkPoints(int x, int y, ArrayList<Point> points) {
         int count = 1;
+
+        if(count>=5){
+            return true;
+        }
         for (int i = 1; i < MAX_STONE; i++) {
             if (points.contains(new Point(x - i, y)) || points.contains(new Point(x + i, y)) ||
                     points.contains(new Point(x, y - i)) || points.contains(new Point(x, y + i)) ||

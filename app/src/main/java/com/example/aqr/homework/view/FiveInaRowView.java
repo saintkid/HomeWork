@@ -1,6 +1,8 @@
 package com.example.aqr.homework.view;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -25,7 +27,7 @@ import java.util.List;
 
 public class FiveInaRowView extends View {
 
-    private int MAX_LINE = 10;
+    private int MAX_LINE = 16;
     private static final String INSTANCE = "instance";
     private static final String INSTANCE_GAME_OVER = "instance_game_over";
     private static final String INSTANCE_WHITE_ARRAY = "instance_white_array";
@@ -37,8 +39,7 @@ public class FiveInaRowView extends View {
 
     private Bitmap mWhiteStone;
     private Bitmap mBlackStone;
-    private Bitmap mWinGame;
-    private Bitmap mLoseGame;
+
 
     private ArrayList<Point> downWhitePoint = new ArrayList<>();
     private ArrayList<Point> downBlackPoint = new ArrayList<>();
@@ -55,19 +56,19 @@ public class FiveInaRowView extends View {
 
     public FiveInaRowView(Context context) {
         super(context);
-        setBackgroundColor(0x44ff0000);
+        setBackgroundColor(0xffd3b89b);
         init();
     }
 
     public FiveInaRowView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setBackgroundColor(0x44ff0000);
+        setBackgroundColor(0xffd3b89b);
         init();
     }
 
     public FiveInaRowView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        setBackgroundColor(0x44ff0000);
+        setBackgroundColor(0xffd3b89b);
         init();
     }
 
@@ -78,8 +79,9 @@ public class FiveInaRowView extends View {
         mPaint.setStyle(Paint.Style.STROKE);
         mWhiteStone = BitmapFactory.decodeResource(getResources(), R.drawable.ic_stone_white);
         mBlackStone = BitmapFactory.decodeResource(getResources(), R.drawable.ic_stone_black);
-        for(int x = 0;x < 10; x++){
-            for(int y = 0; y < 10; y++) {
+
+        for(int x = 0;x < MAX_LINE; x++){
+            for(int y = 0; y < MAX_LINE; y++) {
                 freePoint.add(new Point(x,y));
             }
         }
@@ -101,8 +103,15 @@ public class FiveInaRowView extends View {
     private void checkGameOver() {
 
         if (checkFiveInRow.isFiveInRow(downBlackPoint) || checkFiveInRow.isFiveInRow(downWhitePoint)) {
-            isWhiteWin = checkFiveInRow.isFiveInRow(downBlackPoint);
+            isWhiteWin = checkFiveInRow.isFiveInRow(downWhitePoint);
             isGameOver = true;
+        }
+        else if(isWhite) {
+            Point point = fiveInRowAI.doAI(downWhitePoint,downBlackPoint,freePoint);
+            downWhitePoint.add(point);
+            freePoint.remove(point);
+            invalidate();
+            isWhite = !isWhite;
         }
     }
 
@@ -130,11 +139,10 @@ public class FiveInaRowView extends View {
         super.onSizeChanged(w, h, oldw, oldh);
         mViewWidth = w;
         mLineHeight = mViewWidth * 1.0f / MAX_LINE;
-
         int stoneWidth = (int) (mLineHeight * ratio);
-
         mWhiteStone = Bitmap.createScaledBitmap(mWhiteStone, stoneWidth, stoneWidth, false);
         mBlackStone = Bitmap.createScaledBitmap(mBlackStone, stoneWidth, stoneWidth, false);
+
 
     }
 
@@ -153,13 +161,13 @@ public class FiveInaRowView extends View {
             freePoint.remove(p);
             downBlackPoint.add(p);
 
-           downWhitePoint.add(fiveInRowAI.doAI(downWhitePoint,downBlackPoint,freePoint));
+             //downWhitePoint.add(fiveInRowAI.doAI(downWhitePoint,downBlackPoint,freePoint));
 
 
 
 
             invalidate();
-            //isWhite = !isWhite;
+            isWhite = !isWhite;
 
         }
         return true;
@@ -174,8 +182,28 @@ public class FiveInaRowView extends View {
         drawStone(canvas);
         checkGameOver();
         if (isGameOver) {
-            drawResult(canvas);
+            AlertDialog.Builder gameOverDialog = new AlertDialog.Builder(getContext());
+            gameOverDialog.setCancelable(false);
+            if(isWhiteWin)  gameOverDialog.setTitle("你输了");
+            else gameOverDialog.setTitle("你赢了");
+            gameOverDialog.setNegativeButton("结束", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+
+                }
+            });
+            gameOverDialog.setPositiveButton("再来一局", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    refresh();
+                    dialog.dismiss();
+                }
+            });
+            gameOverDialog.show();
+
         }
+
     }
 
     private void drawBroad(Canvas canvas) {
@@ -209,12 +237,6 @@ public class FiveInaRowView extends View {
         }
     }
 
-    private void drawResult(Canvas canvas) {
-        if (isWhiteWin) {
-
-        }
-
-    }
 
 
     @Override

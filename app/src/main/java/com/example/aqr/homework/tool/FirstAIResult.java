@@ -7,6 +7,7 @@ import android.graphics.Point;
  */
 
 public class FirstAIResult {
+    //连续数
     int count;
     //点位
     Point point;
