@@ -114,19 +114,19 @@ public class FiveAIByAqr {
             }
 
             hGrade = getHorizantolMaxGrade(point, computerPoints, freePoints);
-            if (hGrade >= 9) {
+            if (hGrade > 9) {
                 return point;
             }
             vGrade = getVerticalMaxGrade(point, computerPoints, freePoints);
-            if (vGrade >= 9) {
+            if (vGrade > 9) {
                 return point;
             }
             rDGrade = getRightDiagonalMaxGrade(point, computerPoints, freePoints);
-            if (rDGrade >= 9) {
+            if (rDGrade > 9) {
                 return point;
             }
             lDGrade = getLeftDiagonalMaxGrade(point, computerPoints, freePoints);
-            if (lDGrade >= 9) {
+            if (lDGrade > 9) {
                 return point;
             }
             Log.d("Test", "AI:" + "\n" + "HGrade: " + hGrade + "\t" + "VGrade: " + vGrade + "\t" + "RDGrade: " + rDGrade + "\t" + "LDGrade: " + lDGrade + "\n");
@@ -194,17 +194,6 @@ public class FiveAIByAqr {
 
         bestPoint = doSecondAI();
         refresh();
-
-        // for(int i = 0;i<finalBestPoints.size();i++)
-        // Log.d("Test","BestGrade: "+finalBestPoints.get(i).maxPointGrade+"\t"+"AIPoint: "+finalBestPoints.get(i).bestPoint);
-
-        Log.d("Test", "BestPoint: " + bestPoint);
-        for (int i = 0; i < finalBestPoints.size(); i++) {
-            Log.d("TestBest", "BestGrade: " + finalBestPoints.get(i).maxPointGrade + "\t" + "BestPoint: " + finalBestPoints.get(i).bestPoint + "\n");
-            Log.d("TestBest", "AIBestGrade: " + computerBestPoints.get(i).maxPointGrade + "\t" + "AIBestPoint: " + computerBestPoints.get(i).bestPoint + "\n");
-            Log.d("TestBest", "HumanBestGrade: " + humanBestPoints.get(i).maxPointGrade + "\t" + "HumanBestPoint: " + humanBestPoints.get(i).bestPoint + "\n");
-        }
-
 
         return bestPoint;
         // doFirstAI();

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+    <TableRow android:gravity="center">
+       <Button
+           android:id="@+id/newGame"
+           android:text="新游戏"
+
+           />
+    </TableRow>
+    <TableRow android:gravity="center">
+        <Button
+            android:id="@+id/oldGame"
+            android:text="保存的游戏"
+
+            />
+    </TableRow>
+    <TableRow android:gravity="center">
+        <Button
+            android:id="@+id/gameBoard"
+            android:text="榜单"
+
+            />
+    </TableRow>
+    <TableRow android:gravity="center">
+        <Button
+            android:id="@+id/setting"
+            android:text="设置"
+
+            />
+    </TableRow>
+    <TableRow android:gravity="center">
+        <Button
+            android:id="@+id/quitAPP"
+            android:text="退出"
+
+            />
+    </TableRow>
+
+</TableLayout>

@@ -15,7 +15,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.example.aqr.homework.R;
-import com.example.aqr.homework.tool.CheckFiveInRow;
+import com.example.aqr.homework.tool.GameOverManager;
 import com.example.aqr.homework.tool.FiveAIByAqr;
 
 
@@ -52,8 +52,7 @@ public class FiveInaRowView extends View {
 
     private Paint mPaint = new Paint();
 
-    private CheckFiveInRow checkFiveInRow = new CheckFiveInRow();
-    //private FiveInRowAI fiveInRowAI = new FiveInRowAI();
+    private GameOverManager gameOverManager = new GameOverManager();
     private FiveAIByAqr fiveAIByAqr = new FiveAIByAqr();
 
     public FiveInaRowView(Context context) {
@@ -111,8 +110,8 @@ public class FiveInaRowView extends View {
 
     private void checkGameOver() {
 
-        if (checkFiveInRow.isFiveInRow(downBlackPoint) || checkFiveInRow.isFiveInRow(downWhitePoint)) {
-            isWhiteWin = !checkFiveInRow.isFiveInRow(downBlackPoint);
+        if (gameOverManager.isFiveInRow(downBlackPoint) || gameOverManager.isFiveInRow(downWhitePoint)) {
+            isWhiteWin = !gameOverManager.isFiveInRow(downBlackPoint);
             isGameOver = true;
         } else if (isWhite && !isGameOver) {
             fiveAIByAqr.setParams(downWhitePoint, downBlackPoint, freePoint);
