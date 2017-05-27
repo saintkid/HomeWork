@@ -16,10 +16,11 @@ import android.view.View;
 
 import com.example.aqr.homework.R;
 import com.example.aqr.homework.tool.CheckFiveInRow;
-import com.example.aqr.homework.tool.FiveInRowAI;
+import com.example.aqr.homework.tool.FiveAIByAqr;
+
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 /**
  * Created by Aqr on 2017/5/24.
@@ -27,7 +28,7 @@ import java.util.List;
 
 public class FiveInaRowView extends View {
 
-    private int MAX_LINE = 16;
+    private int MAX_LINE = 15;
     private static final String INSTANCE = "instance";
     private static final String INSTANCE_GAME_OVER = "instance_game_over";
     private static final String INSTANCE_WHITE_ARRAY = "instance_white_array";
@@ -52,7 +53,8 @@ public class FiveInaRowView extends View {
     private Paint mPaint = new Paint();
 
     private CheckFiveInRow checkFiveInRow = new CheckFiveInRow();
-    private FiveInRowAI fiveInRowAI = new FiveInRowAI();
+    //private FiveInRowAI fiveInRowAI = new FiveInRowAI();
+    private FiveAIByAqr fiveAIByAqr = new FiveAIByAqr();
 
     public FiveInaRowView(Context context) {
         super(context);
@@ -79,21 +81,28 @@ public class FiveInaRowView extends View {
         mPaint.setStyle(Paint.Style.STROKE);
         mWhiteStone = BitmapFactory.decodeResource(getResources(), R.drawable.ic_stone_white);
         mBlackStone = BitmapFactory.decodeResource(getResources(), R.drawable.ic_stone_black);
+        initFreePoint();
 
-        for(int x = 0;x < MAX_LINE; x++){
-            for(int y = 0; y < MAX_LINE; y++) {
-                freePoint.add(new Point(x,y));
-            }
-        }
+
     }
 
     public void refresh() {
         downWhitePoint.clear();
         downBlackPoint.clear();
+        freePoint.clear();
+        initFreePoint();
         isGameOver = false;
         isWhiteWin = false;
         isWhite = false;
         invalidate();
+    }
+
+    public void initFreePoint() {
+        for (int x = 0; x < MAX_LINE; x++) {
+            for (int y = 0; y < MAX_LINE; y++) {
+                freePoint.add(new Point(x, y));
+            }
+        }
     }
 
     public Point getPoint(int x, int y) {
@@ -103,11 +112,12 @@ public class FiveInaRowView extends View {
     private void checkGameOver() {
 
         if (checkFiveInRow.isFiveInRow(downBlackPoint) || checkFiveInRow.isFiveInRow(downWhitePoint)) {
-            isWhiteWin = checkFiveInRow.isFiveInRow(downWhitePoint);
+            isWhiteWin = !checkFiveInRow.isFiveInRow(downBlackPoint);
             isGameOver = true;
-        }
-        else if(isWhite) {
-            Point point = fiveInRowAI.doAI(downWhitePoint,downBlackPoint,freePoint);
+        } else if (isWhite && !isGameOver) {
+            fiveAIByAqr.setParams(downWhitePoint, downBlackPoint, freePoint);
+            Point point = fiveAIByAqr.getBestPoint();
+            // Point point = fiveInRowAI.doAI(downWhitePoint,downBlackPoint,freePoint);
             downWhitePoint.add(point);
             freePoint.remove(point);
             invalidate();
@@ -161,9 +171,7 @@ public class FiveInaRowView extends View {
             freePoint.remove(p);
             downBlackPoint.add(p);
 
-             //downWhitePoint.add(fiveInRowAI.doAI(downWhitePoint,downBlackPoint,freePoint));
-
-
+            //downWhitePoint.add(fiveInRowAI.doAI(downWhitePoint,downBlackPoint,freePoint));
 
 
             invalidate();
@@ -184,7 +192,7 @@ public class FiveInaRowView extends View {
         if (isGameOver) {
             AlertDialog.Builder gameOverDialog = new AlertDialog.Builder(getContext());
             gameOverDialog.setCancelable(false);
-            if(isWhiteWin)  gameOverDialog.setTitle("你输了");
+            if (isWhiteWin) gameOverDialog.setTitle("你输了");
             else gameOverDialog.setTitle("你赢了");
             gameOverDialog.setNegativeButton("结束", new DialogInterface.OnClickListener() {
                 @Override
@@ -203,6 +211,7 @@ public class FiveInaRowView extends View {
             gameOverDialog.show();
 
         }
+
 
     }
 
@@ -236,7 +245,6 @@ public class FiveInaRowView extends View {
 
         }
     }
-
 
 
     @Override

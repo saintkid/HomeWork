@@ -10,7 +10,8 @@ import java.util.ArrayList;
  */
 
 public class CheckFiveInRow {
-    private final  int MAX_STONE = 5;
+    private final int MAX_STONE = 5;
+
     public CheckFiveInRow() {
     }
 
@@ -29,7 +30,7 @@ public class CheckFiveInRow {
     private boolean checkPoints(int x, int y, ArrayList<Point> points) {
         int count = 1;
 
-        if(count>=5){
+        if (count >= 5) {
             return true;
         }
         for (int i = 1; i < MAX_STONE; i++) {
