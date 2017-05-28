@@ -14,7 +14,9 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.example.aqr.homework.MainActivity;
 import com.example.aqr.homework.R;
+import com.example.aqr.homework.dao.GameDao;
 import com.example.aqr.homework.tool.GameOverManager;
 import com.example.aqr.homework.tool.FiveAIByAqr;
 
@@ -42,9 +44,9 @@ public class FiveInaRowView extends View {
     private Bitmap mBlackStone;
 
 
-    private ArrayList<Point> downWhitePoint = new ArrayList<>();
-    private ArrayList<Point> downBlackPoint = new ArrayList<>();
-    private ArrayList<Point> freePoint = new ArrayList<>();
+    public ArrayList<Point> downWhitePoint = new ArrayList<>();
+    public ArrayList<Point> downBlackPoint = new ArrayList<>();
+    public ArrayList<Point> freePoint = new ArrayList<>();
 
     private boolean isWhite = false;
     private boolean isGameOver = false;
@@ -54,6 +56,7 @@ public class FiveInaRowView extends View {
 
     private GameOverManager gameOverManager = new GameOverManager();
     private FiveAIByAqr fiveAIByAqr = new FiveAIByAqr();
+    private GameDao gameDao = new GameDao();
 
     public FiveInaRowView(Context context) {
         super(context);
@@ -82,6 +85,16 @@ public class FiveInaRowView extends View {
         mBlackStone = BitmapFactory.decodeResource(getResources(), R.drawable.ic_stone_black);
         initFreePoint();
 
+
+    }
+    public void initOldGame(ArrayList<Point> downWhitePoint, ArrayList<Point> downBlackPoint, ArrayList<Point> freePoints){
+        this.downWhitePoint.clear();
+        this.downWhitePoint.addAll(downWhitePoint);
+        this.downBlackPoint.clear();
+        this.downBlackPoint.addAll(downWhitePoint);
+        this.freePoint.clear();
+        this.freePoint.addAll(freePoints);
+        invalidate();
 
     }
 
@@ -189,6 +202,7 @@ public class FiveInaRowView extends View {
         drawStone(canvas);
         checkGameOver();
         if (isGameOver) {
+
             AlertDialog.Builder gameOverDialog = new AlertDialog.Builder(getContext());
             gameOverDialog.setCancelable(false);
             if (isWhiteWin) gameOverDialog.setTitle("你输了");
@@ -196,6 +210,9 @@ public class FiveInaRowView extends View {
             gameOverDialog.setNegativeButton("结束", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
+                    //gameDao.
+                    refresh();
+                    MainActivity.gameFlipper.setDisplayedChild(0);
                     dialog.dismiss();
 
                 }

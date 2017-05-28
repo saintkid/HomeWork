@@ -1,4 +1,4 @@
-package com.example.aqr.homework.util;
+package com.example.aqr.homework;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.os.Bundle;
  * Created by Aqr on 2017/5/27.
  */
 
-public class UserManager extends Activity {
+public class UserActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

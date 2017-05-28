@@ -1,10 +1,18 @@
 [
     {
+        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\beforegame_main.xml",
+        "source": "D:\\Java\\workplace\\HomeWork\\app\\src\\main\\res\\layout\\beforegame_main.xml"
+    },
+    {
         "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\bmob_update_dialog.xml",
         "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\layout\\bmob_update_dialog.xml"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "D:\\Java\\workplace\\HomeWork\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\game_main.xml",
+        "source": "D:\\Java\\workplace\\HomeWork\\app\\src\\main\\res\\layout\\game_main.xml"
+    },
+    {
+        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ongame_main.xml",
+        "source": "D:\\Java\\workplace\\HomeWork\\app\\src\\main\\res\\layout\\ongame_main.xml"
     }
 ]
