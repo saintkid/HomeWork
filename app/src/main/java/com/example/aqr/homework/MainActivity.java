@@ -1,10 +1,13 @@
 package com.example.aqr.homework;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -28,11 +31,13 @@ public class MainActivity extends Activity implements View.OnClickListener{
     private Button quitApp;
     private ArrayList<GameBroad> broad = new ArrayList<>();
     //ongame
+    private static int time = 0;
+    private static int numbers = 0;
     private FiveInaRowView fiveInaRowView;
     private Button quitGame;
     private Button saveGame;
-    private TextView gameTime;
-    private TextView gameMoves;
+    private static TextView gameTime;
+    private static TextView gameMoves;
     private ArrayList<Point> whitePoints = new ArrayList<>();
     private ArrayList<Point> blackPoints = new ArrayList<>();
     private ArrayList<Point> freePoints = new ArrayList<>();
@@ -42,14 +47,31 @@ public class MainActivity extends Activity implements View.OnClickListener{
     private static GameDao gameDao = new GameDao();
     public static Handler handler = new Handler(){
         @Override
-        public void handleMessage(Message msg) {
+        public void handleMessage(final Message msg) {
             switch(msg.what){
                 case 0:
                     //更新时间和落子数
+                    time+=100;
+                    numbers+=msg.arg1;
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            gameTime.setText("用时: "+time/1000);
+                            gameMoves.setText("落子数: "+numbers);
+                        }
+                    });
+
+
                     break;
                 case 1:
                     //游戏结束保存结果
-                    gameDao.saveGameBroad(name,msg.arg1,msg.arg2);
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            gameDao.saveGameBroad(name,msg.arg1,msg.arg2);
+                        }
+                    }).start();
+
                     break;
                 default:
                     break;
@@ -99,6 +121,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
+
         switch (v.getId()){
             //beforegame
             case R.id.newGame:
@@ -124,6 +147,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.setting:
                 //跳转到偏好设置界面，比如设置音乐开启/关闭
+
                 break;
             case R.id.quitAPP:
                 MainActivity.this.finish();
@@ -143,4 +167,6 @@ public class MainActivity extends Activity implements View.OnClickListener{
         }
 
     }
+
+
 }

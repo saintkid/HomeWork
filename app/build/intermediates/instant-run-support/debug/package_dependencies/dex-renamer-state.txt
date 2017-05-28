@@ -1,7 +1,28 @@
-#Wed May 24 09:12:05 CST 2017
-base.0=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_3a909bb27c0f6fd478517d79ab08dd1bf6f4332e
+#Sun May 28 12:48:14 CST 2017
+renamed.8=classes3.dex
+renamed.7=classes.dex
+renamed.6=classes4.dex
+renamed.5=classes5.dex
+renamed.4=classes6.dex
+renamed.3=classes9.dex
+renamed.2=classes8.dex
 renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\constraint-layout-solver-1.0.1_4745605c92b0fa4dbd95b14fa9febea6d1027e69\\classes.dex
-base.1=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\constraint-layout-solver-1.0.1_4745605c92b0fa4dbd95b14fa9febea6d1027e69
-file.0=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_3a909bb27c0f6fd478517d79ab08dd1bf6f4332e\\classes.dex
+base.8=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_92190f396d4b51655d36eabfa9a2138799bdada2
+renamed.0=classes7.dex
+base.7=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\BmobSDK_3.5.3_20161116_1bb2b6514bca43f8ad2c65b2d4595d432ae6175d
+base.6=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\constraint-layout-solver-1.0.1_4745605c92b0fa4dbd95b14fa9febea6d1027e69
+base.5=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\gson-2.6.2_d644a7f3daf3f2c40b1e4a82b2e1075bb2e5c0f4
+base.4=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\okhttp-3.3.1_f07b31dfc39eaafe0125e6f9f950022c12afc3ca
+base.3=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\rxjava-1.1.6_c3f10331686d28c994621f8ab3e8f88b31dd3418
+base.2=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\rxandroid-1.2.0_888b64039013505aa6c83d5d381c199c4153d4de
+base.1=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_3a909bb27c0f6fd478517d79ab08dd1bf6f4332e
+base.0=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\okio-1.7.0_94c7a731f441ef96f9c05bf2911045cbf55ad669
+file.8=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_92190f396d4b51655d36eabfa9a2138799bdada2\\classes.dex
+file.7=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\BmobSDK_3.5.3_20161116_1bb2b6514bca43f8ad2c65b2d4595d432ae6175d\\classes.dex
+file.6=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\constraint-layout-solver-1.0.1_4745605c92b0fa4dbd95b14fa9febea6d1027e69\\classes.dex
+file.5=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\gson-2.6.2_d644a7f3daf3f2c40b1e4a82b2e1075bb2e5c0f4\\classes.dex
+file.4=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\okhttp-3.3.1_f07b31dfc39eaafe0125e6f9f950022c12afc3ca\\classes.dex
+file.3=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\rxjava-1.1.6_c3f10331686d28c994621f8ab3e8f88b31dd3418\\classes.dex
+file.2=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\rxandroid-1.2.0_888b64039013505aa6c83d5d381c199c4153d4de\\classes.dex
+file.1=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_3a909bb27c0f6fd478517d79ab08dd1bf6f4332e\\classes.dex
+file.0=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\okio-1.7.0_94c7a731f441ef96f9c05bf2911045cbf55ad669\\classes.dex

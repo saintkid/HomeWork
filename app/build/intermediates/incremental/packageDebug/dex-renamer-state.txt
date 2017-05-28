@@ -1,4 +1,4 @@
-#Fri May 26 15:22:53 CST 2017
+#Sun May 28 12:48:15 CST 2017
 base.0=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_47634fc14a7d9a849f9d33374f2b4bf878456f49
 renamed.1=classes2.dex
 renamed.0=classes.dex

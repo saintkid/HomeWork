@@ -9,8 +9,10 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.os.Message;
 import android.os.Parcelable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -28,7 +30,7 @@ import java.util.ArrayList;
  * Created by Aqr on 2017/5/24.
  */
 
-public class FiveInaRowView extends View {
+public class FiveInaRowView extends View implements DialogInterface.OnClickListener {
 
     private int MAX_LINE = 15;
     private static final String INSTANCE = "instance";
@@ -56,7 +58,8 @@ public class FiveInaRowView extends View {
 
     private GameOverManager gameOverManager = new GameOverManager();
     private FiveAIByAqr fiveAIByAqr = new FiveAIByAqr();
-    private GameDao gameDao = new GameDao();
+    // private GameDao gameDao = new GameDao();
+    AlertDialog.Builder gameOverDialog = new AlertDialog.Builder(getContext());
 
     public FiveInaRowView(Context context) {
         super(context);
@@ -87,7 +90,8 @@ public class FiveInaRowView extends View {
 
 
     }
-    public void initOldGame(ArrayList<Point> downWhitePoint, ArrayList<Point> downBlackPoint, ArrayList<Point> freePoints){
+
+    public void initOldGame(ArrayList<Point> downWhitePoint, ArrayList<Point> downBlackPoint, ArrayList<Point> freePoints) {
         this.downWhitePoint.clear();
         this.downWhitePoint.addAll(downWhitePoint);
         this.downBlackPoint.clear();
@@ -203,27 +207,13 @@ public class FiveInaRowView extends View {
         checkGameOver();
         if (isGameOver) {
 
-            AlertDialog.Builder gameOverDialog = new AlertDialog.Builder(getContext());
+
             gameOverDialog.setCancelable(false);
             if (isWhiteWin) gameOverDialog.setTitle("你输了");
             else gameOverDialog.setTitle("你赢了");
-            gameOverDialog.setNegativeButton("结束", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    //gameDao.
-                    refresh();
-                    MainActivity.gameFlipper.setDisplayedChild(0);
-                    dialog.dismiss();
+            gameOverDialog.setNegativeButton("结束", this);
+            gameOverDialog.setPositiveButton("再来一局", this);
 
-                }
-            });
-            gameOverDialog.setPositiveButton("再来一局", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    refresh();
-                    dialog.dismiss();
-                }
-            });
             gameOverDialog.show();
 
         }
@@ -284,5 +274,28 @@ public class FiveInaRowView extends View {
             return;
         }
         super.onRestoreInstanceState(state);
+    }
+
+
+    @Override
+    public void onClick(DialogInterface dialog, int which) {
+        switch (which) {
+            case -1:
+                refresh();
+                dialog.dismiss();
+                break;
+            case -2:
+                Message msg = new Message();
+                msg.what = 0;
+                msg.arg1 = downBlackPoint.size();
+                MainActivity.handler.sendMessage(msg);
+                refresh();
+                MainActivity.gameFlipper.setDisplayedChild(0);
+                dialog.dismiss();
+                break;
+            default:
+                break;
+        }
+
     }
 }
