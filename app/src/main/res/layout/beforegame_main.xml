@@ -1,51 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.aqr.homework.MainActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
+
+
+
     <TextView
-        android:id="@+id/user"
-        android:gravity="left"
         android:text="欢迎你，用户名"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:id="@+id/gameUser"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+
+        />
+
+
     <TableLayout
         android:id="@+id/gameManager"
-        android:layout_below="@id/user"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         >
+
         <TableRow android:gravity="center">
+
             <Button
                 android:id="@+id/newGame"
                 android:text="新游戏"
 
                 />
         </TableRow>
+
         <TableRow android:gravity="center">
+
             <Button
                 android:id="@+id/oldGame"
                 android:text="保存的游戏"
 
                 />
         </TableRow>
+
         <TableRow android:gravity="center">
+
             <Button
                 android:id="@+id/gameBoard"
                 android:text="榜单"
 
                 />
         </TableRow>
+
         <TableRow android:gravity="center">
+
             <Button
                 android:id="@+id/setting"
                 android:text="设置"
 
                 />
         </TableRow>
+
         <TableRow android:gravity="center">
+
             <Button
                 android:id="@+id/quitAPP"
                 android:text="退出"

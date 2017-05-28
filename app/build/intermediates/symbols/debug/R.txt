@@ -82,6 +82,7 @@ int id fiveinrow 0x7f080019
 int id gameBoard 0x7f08000d
 int id gameManager 0x7f08000a
 int id gameTime 0x7f08001a
+int id gameUser 0x7f080009
 int id moveNumbers 0x7f08001b
 int id newGame 0x7f08000b
 int id none 0x7f080008
@@ -94,7 +95,6 @@ int id save 0x7f080018
 int id setting 0x7f08000e
 int id spread 0x7f080001
 int id spread_inside 0x7f080004
-int id user 0x7f080009
 int id wrap 0x7f080002
 int layout beforegame_main 0x7f040000
 int layout bmob_update_dialog 0x7f040001

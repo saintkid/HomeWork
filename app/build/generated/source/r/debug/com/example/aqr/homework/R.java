@@ -502,6 +502,7 @@ containing a value of this type.
         public static final int gameBoard=0x7f08000d;
         public static final int gameManager=0x7f08000a;
         public static final int gameTime=0x7f08001a;
+        public static final int gameUser=0x7f080009;
         public static final int moveNumbers=0x7f08001b;
         public static final int newGame=0x7f08000b;
         public static final int none=0x7f080008;
@@ -514,7 +515,6 @@ containing a value of this type.
         public static final int setting=0x7f08000e;
         public static final int spread=0x7f080001;
         public static final int spread_inside=0x7f080004;
-        public static final int user=0x7f080009;
         public static final int wrap=0x7f080002;
     }
     public static final class layout {

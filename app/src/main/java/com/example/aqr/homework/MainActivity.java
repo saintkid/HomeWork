@@ -8,9 +8,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.example.aqr.homework.dao.GameDao;
@@ -90,11 +92,11 @@ public class MainActivity extends Activity implements View.OnClickListener{
     }
     protected void init(){
         //beforegame
-        userName = (TextView) findViewById(R.id.user);
+        userName = (TextView) findViewById(R.id.gameUser);
         userName.post(new Runnable() {
             @Override
             public void run() {
-                userName.setText("");
+                userName.setText("欢迎你，用户名");
             }
         });
         newGame = (Button) findViewById(R.id.newGame);
@@ -131,17 +133,27 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 whitePoints = gameDao.selectSaveGame(name, 1);
                 blackPoints = gameDao.selectSaveGame(name, 0);
                 freePoints = gameDao.selectSaveGame(name, 2);
-                if(freePoints.size()<225) {
+                if(freePoints!=null) {
                     fiveInaRowView.initOldGame(whitePoints, blackPoints, freePoints);
                 }
-                gameFlipper.setDisplayedChild(1);
+                else{
+                    Toast toast = Toast.makeText(MainActivity.this,"没有保存的游戏！",Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER,0,0);
+
+                    toast.show();
+
+                }
                 break;
             case R.id.gameBoard:
                 broad = gameDao.selectGameBroad();
-                if(broad.size()>0){
+                if(broad != null){
 
                 }
                 else{
+                    Toast toast = Toast.makeText(MainActivity.this,"没有榜单信息！",Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER,0,0);
+
+                    toast.show();
 
                 }
                 break;

@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\drawable\\bmob_update_button_cancel_bg_tap.xml"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_stone_white.png",
-        "source": "D:\\Java\\workplace\\HomeWork\\app\\src\\main\\res\\drawable\\ic_stone_white.png"
-    },
-    {
         "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_stone_black.png",
         "source": "D:\\Java\\workplace\\HomeWork\\app\\src\\main\\res\\drawable\\ic_stone_black.png"
+    },
+    {
+        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_stone_white.png",
+        "source": "D:\\Java\\workplace\\HomeWork\\app\\src\\main\\res\\drawable\\ic_stone_white.png"
     },
     {
         "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_dialog_bg.xml",
@@ -40,12 +40,12 @@
         "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\drawable\\bmob_update_button_ok_bg_tap.xml"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_cancel_bg_normal.xml",
-        "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\drawable\\bmob_update_button_cancel_bg_normal.xml"
-    },
-    {
         "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_wifi_disable.png",
         "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\drawable\\bmob_update_wifi_disable.png"
+    },
+    {
+        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_cancel_bg_normal.xml",
+        "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\drawable\\bmob_update_button_cancel_bg_normal.xml"
     },
     {
         "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_cancel_bg_selector.xml",
