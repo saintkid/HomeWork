@@ -3,6 +3,7 @@ package com.example.aqr.homework;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Handler;
@@ -21,6 +22,10 @@ import com.example.aqr.homework.view.FiveInaRowView;
 
 import java.util.ArrayList;
 import java.util.Objects;
+
+import cn.bmob.v3.Bmob;
+
+import static com.example.aqr.homework.view.RegisterActivity.INTENT_USER;
 
 public class MainActivity extends Activity implements View.OnClickListener{
 
@@ -45,6 +50,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     private ArrayList<Point> freePoints = new ArrayList<>();
     //main
     private static String name;
+    private String username;
     public static ViewFlipper gameFlipper;
     private static GameDao gameDao = new GameDao();
     public static Handler handler = new Handler(){
@@ -85,10 +91,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent intent = getIntent();
+        username= intent.getStringExtra(INTENT_USER);
         setContentView(R.layout.game_main);
         init();
-
-
     }
     protected void init(){
         //beforegame
@@ -96,7 +102,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         userName.post(new Runnable() {
             @Override
             public void run() {
-                userName.setText("欢迎你，用户名");
+                userName.setText("欢迎"+username+"，用户名");
             }
         });
         newGame = (Button) findViewById(R.id.newGame);

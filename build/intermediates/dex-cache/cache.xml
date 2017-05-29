@@ -3,21 +3,102 @@
 
     <item
         is-multidex="true"
-        jar="D:\Java\workplace\HomeWork\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="E:\Android\HomeWork\app\libs\ShareSDK-Core-2.8.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da4b0def0be4d4be0d3460638e087d01f60347c0">
+        <dex dex="E:\Android\HomeWork\app\build\intermediates\transforms\dex\debug\folders\1000\2\ShareSDK-Core-2.8.3_10196939c2fb84255c41f8ed6c978d316ee7ae60\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Android\HomeWork\app\libs\ShareSDK-Wechat-Favorite-2.8.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0be6c30c87d2213d57d60adf04d4567639603070">
+        <dex dex="E:\Android\HomeWork\app\build\intermediates\transforms\dex\debug\folders\1000\2\ShareSDK-Wechat-Favorite-2.8.3_0cc5a0642680e3bca3c143b2eee8a68d37eb4b5c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Android\HomeWork\app\libs\ShareSDK-QQ-2.8.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="56808c93d53310bb7e5d79a1a5709dfd2c11d532">
+        <dex dex="E:\Android\HomeWork\app\build\intermediates\transforms\dex\debug\folders\1000\2\ShareSDK-QQ-2.8.3_e2c8855473ed221f049891e21bdbb19d13c515c3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Android\HomeWork\app\libs\ShareSDK-Wechat-Moments-2.8.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="415c1cb912f11e414e6beaf1e59090c154f6da8d">
+        <dex dex="E:\Android\HomeWork\app\build\intermediates\transforms\dex\debug\folders\1000\2\ShareSDK-Wechat-Moments-2.8.3_3928eb0def6e78a21ddded0eabbe6fcd04c0a39f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Android\HomeWork\app\libs\ShareSDK-SinaWeibo-2.8.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="23b18b312360535b71c0702b842da81fbadcdba3">
+        <dex dex="E:\Android\HomeWork\app\build\intermediates\transforms\dex\debug\folders\1000\2\ShareSDK-SinaWeibo-2.8.3_01c8c6f29fb982cd3502488f0ce31a2754afebe5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Android\HomeWork\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="425886b92b671ba17672834d7995383883ed044c">
+        <dex dex="E:\Android\HomeWork\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_e7d75c2482d45102ced9bf3d81727fb88a721730\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Android\HomeWork\app\libs\ShareSDK-Wechat-Core-2.8.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="65d3d26aac0c67984e4612539017f7a5f4bd6507">
+        <dex dex="E:\Android\HomeWork\app\build\intermediates\transforms\dex\debug\folders\1000\2\ShareSDK-Wechat-Core-2.8.3_9c17895b492aa07e40fb04220e7c64a34e66d4c4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Android\HomeWork\app\libs\ShareSDK-Wechat-2.8.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6c77dd3832635149e694df173896f81e1e2d07aa">
+        <dex dex="E:\Android\HomeWork\app\build\intermediates\transforms\dex\debug\folders\1000\2\ShareSDK-Wechat-2.8.3_230385f4c6ab18ba9ad5804e9347a62f1088f6e4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Android\HomeWork\app\libs\MobTools-2017.0412.1554.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ff1c0540ed5607fa34269a7adc63679e4fcfb714">
+        <dex dex="E:\Android\HomeWork\app\build\intermediates\transforms\dex\debug\folders\1000\2\MobTools-2017.0412.1554_72334b641d275f1dcff473b92c2a01a5b093e1a1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Android\HomeWork\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
-        <dex dex="D:\Java\workplace\HomeWork\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_47634fc14a7d9a849f9d33374f2b4bf878456f49\classes.dex" />
+        <dex dex="E:\Android\HomeWork\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_a03974d031d3b69471a979b23ba391391bc4fe55\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="D:\Java\workplace\HomeWork\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="E:\Android\HomeWork\app\libs\MobCommons-2017.0412.1554.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="205721a31b92e54dc76c6a79a0108f23ff937921">
-        <dex dex="D:\Java\workplace\HomeWork\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_4a01a676403438bca29ec3865a7bdf463a527edb\classes.dex" />
+        sha1="f93319b520c12b41265a55d1ccacde97b9f18a9c">
+        <dex dex="E:\Android\HomeWork\app\build\intermediates\transforms\dex\debug\folders\1000\2\MobCommons-2017.0412.1554_07bd7e7f21ccb883d81e83d474e68a0b84e175db\classes.dex" />
     </item>
 
 </items>

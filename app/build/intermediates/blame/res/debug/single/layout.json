@@ -1,18 +1,26 @@
 [
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\beforegame_main.xml",
-        "source": "D:\\Java\\workplace\\HomeWork\\app\\src\\main\\res\\layout\\beforegame_main.xml"
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ongame_main.xml",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\layout\\ongame_main.xml"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\bmob_update_dialog.xml",
-        "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\layout\\bmob_update_dialog.xml"
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\game_main.xml",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\layout\\game_main.xml"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\game_main.xml",
-        "source": "D:\\Java\\workplace\\HomeWork\\app\\src\\main\\res\\layout\\game_main.xml"
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ongame_main.xml",
-        "source": "D:\\Java\\workplace\\HomeWork\\app\\src\\main\\res\\layout\\ongame_main.xml"
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register.xml",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\bmob_update_dialog.xml",
+        "source": "C:\\Users\\北\\.android\\build-cache\\16f78e28895e551905f7fe16ef51cddf535de807\\output\\res\\layout\\bmob_update_dialog.xml"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\beforegame_main.xml",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\layout\\beforegame_main.xml"
     }
 ]

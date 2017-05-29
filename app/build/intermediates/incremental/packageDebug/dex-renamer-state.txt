@@ -1,4 +1,7 @@
-#Sun May 28 14:15:44 CST 2017
-base.0=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+#Mon May 29 16:20:51 CST 2017
+base.0=E\:\\Android\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_e7d75c2482d45102ced9bf3d81727fb88a721730
+renamed.1=classes2.dex
 renamed.0=classes.dex
-file.0=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
+file.1=E\:\\Android\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a03974d031d3b69471a979b23ba391391bc4fe55\\classes.dex
+base.1=E\:\\Android\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a03974d031d3b69471a979b23ba391391bc4fe55
+file.0=E\:\\Android\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_e7d75c2482d45102ced9bf3d81727fb88a721730\\classes.dex

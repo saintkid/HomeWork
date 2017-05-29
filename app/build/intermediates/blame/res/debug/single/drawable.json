@@ -1,58 +1,126 @@
 [
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_cancel_bg_focused.xml",
-        "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\drawable\\bmob_update_button_cancel_bg_focused.xml"
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ssdk_oks_classic_progressbar.xml",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\ssdk_oks_classic_progressbar.xml"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_check_selector.xml",
-        "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\drawable\\bmob_update_button_check_selector.xml"
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_cancel_bg_focused.xml",
+        "source": "C:\\Users\\北\\.android\\build-cache\\16f78e28895e551905f7fe16ef51cddf535de807\\output\\res\\drawable\\bmob_update_button_cancel_bg_focused.xml"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_cancel_bg_tap.xml",
-        "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\drawable\\bmob_update_button_cancel_bg_tap.xml"
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_back.png",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\icon_back.png"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_stone_black.png",
-        "source": "D:\\Java\\workplace\\HomeWork\\app\\src\\main\\res\\drawable\\ic_stone_black.png"
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_btn_green_tk_normal.xml",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\round_btn_green_tk_normal.xml"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_stone_white.png",
-        "source": "D:\\Java\\workplace\\HomeWork\\app\\src\\main\\res\\drawable\\ic_stone_white.png"
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\show_pwd.png",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\show_pwd.png"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_dialog_bg.xml",
-        "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\drawable\\bmob_update_dialog_bg.xml"
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\passwd_bg_selector.xml",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\passwd_bg_selector.xml"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_ok_bg_normal.xml",
-        "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\drawable\\bmob_update_button_ok_bg_normal.xml"
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_btn_green_tk_click.xml",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\round_btn_green_tk_click.xml"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_ok_bg_selector.xml",
-        "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\drawable\\bmob_update_button_ok_bg_selector.xml"
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_check_selector.xml",
+        "source": "C:\\Users\\北\\.android\\build-cache\\16f78e28895e551905f7fe16ef51cddf535de807\\output\\res\\drawable\\bmob_update_button_check_selector.xml"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_ok_bg_focused.xml",
-        "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\drawable\\bmob_update_button_ok_bg_focused.xml"
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button.png",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\button.png"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_ok_bg_tap.xml",
-        "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\drawable\\bmob_update_button_ok_bg_tap.xml"
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_stone_black.png",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\ic_stone_black.png"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_wifi_disable.png",
-        "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\drawable\\bmob_update_wifi_disable.png"
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ssdk_oks_classic_platform_cell_back.xml",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\ssdk_oks_classic_platform_cell_back.xml"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_cancel_bg_normal.xml",
-        "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\drawable\\bmob_update_button_cancel_bg_normal.xml"
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_cancel_bg_tap.xml",
+        "source": "C:\\Users\\北\\.android\\build-cache\\16f78e28895e551905f7fe16ef51cddf535de807\\output\\res\\drawable\\bmob_update_button_cancel_bg_tap.xml"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_cancel_bg_selector.xml",
-        "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\drawable\\bmob_update_button_cancel_bg_selector.xml"
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ico_qq_accout.png",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\ico_qq_accout.png"
     },
     {
-        "merged": "D:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_close_bg_selector.xml",
-        "source": "C:\\Users\\Aqr\\.android\\build-cache\\85fb5a52f45932b646cb9aef7d88060124f8fdb2\\output\\res\\drawable\\bmob_update_button_close_bg_selector.xml"
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\white_border_area.9.png",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\white_border_area.9.png"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_cancel_bg_selector.xml",
+        "source": "C:\\Users\\北\\.android\\build-cache\\16f78e28895e551905f7fe16ef51cddf535de807\\output\\res\\drawable\\bmob_update_button_cancel_bg_selector.xml"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_wifi_disable.png",
+        "source": "C:\\Users\\北\\.android\\build-cache\\16f78e28895e551905f7fe16ef51cddf535de807\\output\\res\\drawable\\bmob_update_wifi_disable.png"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_ok_bg_tap.xml",
+        "source": "C:\\Users\\北\\.android\\build-cache\\16f78e28895e551905f7fe16ef51cddf535de807\\output\\res\\drawable\\bmob_update_button_ok_bg_tap.xml"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_close_bg_selector.xml",
+        "source": "C:\\Users\\北\\.android\\build-cache\\16f78e28895e551905f7fe16ef51cddf535de807\\output\\res\\drawable\\bmob_update_button_close_bg_selector.xml"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_btn_green_tk_disable.xml",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\round_btn_green_tk_disable.xml"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ico_qq_wixin.png",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\ico_qq_wixin.png"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\yellow_arrow.png",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\yellow_arrow.png"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\hide_pwd.png",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\hide_pwd.png"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ico_sina_weibo.png",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\ico_sina_weibo.png"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_ok_bg_selector.xml",
+        "source": "C:\\Users\\北\\.android\\build-cache\\16f78e28895e551905f7fe16ef51cddf535de807\\output\\res\\drawable\\bmob_update_button_ok_bg_selector.xml"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_ok_bg_focused.xml",
+        "source": "C:\\Users\\北\\.android\\build-cache\\16f78e28895e551905f7fe16ef51cddf535de807\\output\\res\\drawable\\bmob_update_button_ok_bg_focused.xml"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_dialog_bg.xml",
+        "source": "C:\\Users\\北\\.android\\build-cache\\16f78e28895e551905f7fe16ef51cddf535de807\\output\\res\\drawable\\bmob_update_dialog_bg.xml"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\delete_username.png",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\delete_username.png"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_get_code_selector.xml",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\btn_get_code_selector.xml"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_stone_white.png",
+        "source": "E:\\Android\\HomeWork\\app\\src\\main\\res\\drawable\\ic_stone_white.png"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_cancel_bg_normal.xml",
+        "source": "C:\\Users\\北\\.android\\build-cache\\16f78e28895e551905f7fe16ef51cddf535de807\\output\\res\\drawable\\bmob_update_button_cancel_bg_normal.xml"
+    },
+    {
+        "merged": "E:\\Android\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bmob_update_button_ok_bg_normal.xml",
+        "source": "C:\\Users\\北\\.android\\build-cache\\16f78e28895e551905f7fe16ef51cddf535de807\\output\\res\\drawable\\bmob_update_button_ok_bg_normal.xml"
     }
 ]
