@@ -315,6 +315,7 @@ public class FiveInaRowView extends View implements DialogInterface.OnClickListe
 
     @Override
     public void onClick(DialogInterface dialog, int which) {
+
         Message msg;
         switch (which) {
             case -1:
@@ -336,6 +337,7 @@ public class FiveInaRowView extends View implements DialogInterface.OnClickListe
                 }
                 refresh();
                 MainActivity.gameFlipper.setDisplayedChild(0);
+
                 dialog.dismiss();
                 break;
             default:

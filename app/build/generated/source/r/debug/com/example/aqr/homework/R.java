@@ -459,8 +459,9 @@ containing a value of this type.
     }
     public static final class color {
         public static final int colorAccent=0x7f050000;
-        public static final int colorPrimary=0x7f050001;
-        public static final int colorPrimaryDark=0x7f050002;
+        public static final int colorChess=0x7f050001;
+        public static final int colorPrimary=0x7f050002;
+        public static final int colorPrimaryDark=0x7f050003;
     }
     public static final class drawable {
         public static final int bmob_update_btn_check_off_focused_holo_light=0x7f020000;
@@ -498,23 +499,24 @@ containing a value of this type.
         public static final int bmob_update_id_ok=0x7f080014;
         public static final int bmob_update_wifi_indicator=0x7f080010;
         public static final int chains=0x7f080007;
-        public static final int fiveinrow=0x7f080019;
+        public static final int fiveinrow=0x7f08001a;
         public static final int gameBoard=0x7f08000d;
         public static final int gameManager=0x7f08000a;
-        public static final int gameTime=0x7f08001a;
+        public static final int gameTime=0x7f08001b;
         public static final int gameUser=0x7f080009;
-        public static final int moveNumbers=0x7f08001b;
+        public static final int moveNumbers=0x7f08001c;
         public static final int newGame=0x7f08000b;
         public static final int none=0x7f080008;
         public static final int oldGame=0x7f08000c;
         public static final int packed=0x7f080003;
         public static final int parent=0x7f080000;
         public static final int quitAPP=0x7f08000f;
-        public static final int quitGame=0x7f080017;
-        public static final int save=0x7f080018;
+        public static final int quitGame=0x7f080018;
+        public static final int save=0x7f080019;
         public static final int setting=0x7f08000e;
         public static final int spread=0x7f080001;
         public static final int spread_inside=0x7f080004;
+        public static final int toolbar=0x7f080017;
         public static final int wrap=0x7f080002;
     }
     public static final class layout {

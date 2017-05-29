@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 import android.widget.ViewFlipper;
 
 import com.example.aqr.homework.dao.GameDao;
@@ -45,9 +46,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Button saveGame;
     private static TextView gameTime;
     private static TextView gameMoves;
-    private  ArrayList<Point> whitePoints = new ArrayList<>();
-    private  ArrayList<Point> blackPoints = new ArrayList<>();
+    private ArrayList<Point> whitePoints = new ArrayList<>();
+    private ArrayList<Point> blackPoints = new ArrayList<>();
     //main
+    private Toolbar toolbar;
     private static boolean isPause = false;
     private static String name = "gg";
     public static ViewFlipper gameFlipper;
@@ -58,7 +60,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             switch (msg.what) {
                 case 0:
                     //更新时间和落子数
-                    if(!isPause) {
+                    if (!isPause) {
                         time += 100;
                         numbers = msg.arg1;
                         gameTime.setText("用时: " + time / 1000);
@@ -70,7 +72,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 case 1:
                     //游戏结束保存结果
 
-                    gameDao.saveGameBroad(name, time/1000, msg.arg1);
+                    gameDao.saveGameBroad(name, time / 1000, msg.arg1);
+
+                    gameDao.selectSaveGame(name);
+                    gameDao.selectGameBroad();
 
                     break;
                 case 2:
@@ -98,6 +103,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     protected void init() {
         //beforegame
+        gameDao.selectSaveGame(name);
+        gameDao.selectGameBroad();
+
         userName = (TextView) findViewById(R.id.gameUser);
         userName.post(new Runnable() {
             @Override
@@ -125,6 +133,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         gameMoves = (TextView) findViewById(R.id.moveNumbers);
         //game
         gameFlipper = (ViewFlipper) findViewById(R.id.gameManager);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setLogo(R.mipmap.ic_launcher_round);
+        toolbar.setTitle("五子棋");
     }
 
     @Override
@@ -137,18 +148,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.oldGame:
                 blackPoints.clear();
                 whitePoints.clear();
-                gameDao.selectSaveGame(name, name);
-                sleep(3000);
-                    blackPoints.addAll(gameDao.getHPoints());
-                    whitePoints.addAll(gameDao.getCPoints());
-                time = gameDao.getTime()*1000;
+                blackPoints.addAll(gameDao.getHPoints());
+                whitePoints.addAll(gameDao.getCPoints());
+                time = gameDao.getTime() * 1000;
 
                 if (blackPoints.size() > 0 && whitePoints.size() > 0) {
 
                     fiveInaRowView.initOldGame(whitePoints, blackPoints);
                     gameFlipper.setDisplayedChild(1);
-                }
-                else {
+                } else {
                     Toast toast = Toast.makeText(MainActivity.this, "没有保存的游戏！", Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.CENTER, 0, 0);
 
@@ -158,8 +166,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.gameBoard:
                 broad.clear();
-                gameDao.selectGameBroad();
-                sleep(2000);
+
                 broad.addAll(gameDao.getGameBroads());
                 if (broad != null && broad.size() > 0) {
                     int i = broad.size();
@@ -196,47 +203,23 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             //ongame
             case R.id.quitGame:
                 fiveInaRowView.refresh();
+                gameDao.selectSaveGame(name);
+                gameDao.selectGameBroad();
                 gameFlipper.setDisplayedChild(0);
                 break;
             case R.id.save:
                 isPause = true;
-                final EditText et = new EditText(MainActivity.this);
-                new AlertDialog.Builder(this).setTitle("请输入存储名")
-                        .setIcon(android.R.drawable.ic_dialog_info)
-                        .setView(et)
-                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                final String gameName = et.getText().toString();
-                                if (gameName == "") {
-                                    Toast toast = Toast.makeText(MainActivity.this, "名称不能为空！", Toast.LENGTH_SHORT);
-                                    toast.setGravity(Gravity.CENTER, 0, 0);
-                                    toast.show();
-                                } else {
+                gameDao.deleteGame();
 
-                                    if (gameDao.saveGame(name, 0, fiveInaRowView.downWhitePoint, gameName,time/1000) &&
-                                            gameDao.saveGame(name, 1, fiveInaRowView.downBlackPoint, gameName,time/1000)) {
 
-                                        Toast toast = Toast.makeText(MainActivity.this, "保存游戏成功！", Toast.LENGTH_SHORT);
-                                        toast.setGravity(Gravity.CENTER, 0, 0);
-                                        toast.show();
-
-                                    }
-
-isPause = false;
-                                    dialog.dismiss();
-                                }
-                            }
-                        })
-                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                isPause = false;
-                                dialog.dismiss();
-                            }
-                        })
-                        .setCancelable(false)
-                        .show();
+                if (gameDao.saveGame(name, 0, fiveInaRowView.downWhitePoint, time / 1000) &&
+                        gameDao.saveGame(name, 1, fiveInaRowView.downBlackPoint, time / 1000)
+                        ) {
+                    Toast toast = Toast.makeText(MainActivity.this, "保存游戏成功！", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                    isPause = false;
+                }
 
 
                 break;
@@ -264,9 +247,7 @@ isPause = false;
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
-
 
 
 }

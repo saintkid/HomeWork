@@ -14,15 +14,6 @@ public class ActivityCollector {
     public static List<Activity> activities = new ArrayList<Activity>();
     public static void addActivity(Activity activity){
         activities.add(activity);
-        Log.d("Activity","activity: "+activity.getClass().getSimpleName());
-    }
-    public static Activity getActivity(String name){
-        for(Activity activity: activities){
-            if(activity.getClass().getSimpleName().equals(name)){
-                return activity;
-            }
-        }
-        return  null;
     }
     public static void removeActivity(Activity activity){
         activities.remove(activity);

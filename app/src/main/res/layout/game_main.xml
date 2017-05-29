@@ -2,6 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/colorChess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Toolbar>
 
     <ViewFlipper
         android:id="@+id/gameManager"
