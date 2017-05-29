@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun May 28 14:15:45 CST 2017
+#Mon May 29 15:55:10 CST 2017
 5.base=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_
 42.base=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\folders\\2000\\1f\\main
 32.set=NATIVE_RESOURCE
@@ -22,7 +22,7 @@
 1.set=ANDROID_RESOURCE
 36.base=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\folders\\2000\\1f\\main
 51.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\folders\\2000\\1f\\main\\lib\\armeabi\\libBmobStat.so
-8.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\mipmap-xhdpi-v4\\ic_launcher_round.png
+8.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\bmob_update_close_bg_tap.png
 12.base=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_
 8.set=ANDROID_RESOURCE
 45.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\bmob_update_dialog_bg.xml
@@ -39,7 +39,7 @@
 19.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\beforegame_main.xml
 2.base=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_
 29.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\mipmap-xxhdpi-v4\\ic_launcher_round.png
-11.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\bmob_update_btn_check_off_holo_light.png
+11.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\bmob_update_button_close_bg_selector.xml
 53.set=ANDROID_RESOURCE
 39.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
 6.base=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -64,7 +64,7 @@ count=55
 42.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\folders\\2000\\1f\\main\\lib\\arm64-v8a\\libBmobStat.so
 16.set=ANDROID_RESOURCE
 37.base=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_
-52.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\bmob_update_btn_check_on_holo_light.png
+52.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\mipmap-hdpi-v4\\ic_launcher.png
 9.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\bmob_update_wifi_disable.png
 0.set=ANDROID_RESOURCE
 13.base=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -80,7 +80,7 @@ count=55
 3.base=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_
 40.base=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_
 12.set=ANDROID_RESOURCE
-12.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\bmob_update_button_close_bg_selector.xml
+12.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\bmob_update_btn_check_off_holo_light.png
 50.base=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_
 7.base=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_
 19.set=ANDROID_RESOURCE
@@ -106,7 +106,7 @@ count=55
 43.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\jars\\2\\1f\\main.jar\\META-INF\\rxjava.properties
 26.set=ANDROID_RESOURCE
 38.base=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\folders\\2000\\1f\\main
-53.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\mipmap-hdpi-v4\\ic_launcher.png
+53.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\bmob_update_btn_check_on_holo_light.png
 15.set=NATIVE_RESOURCE
 14.base=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_
 47.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\folders\\2000\\1f\\main\\lib\\armeabi-v7a\\libbmob.so
@@ -144,7 +144,7 @@ count=55
 47.set=NATIVE_RESOURCE
 19.base=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_
 29.base=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_
-7.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\bmob_update_close_bg_tap.png
+7.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\mipmap-xhdpi-v4\\ic_launcher_round.png
 11.base=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_
 44.file=D\:\\Java\\workplace\\HomeWork\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\mipmap-hdpi-v4\\ic_launcher_round.png
 36.set=NATIVE_RESOURCE

@@ -21,6 +21,7 @@ import com.example.aqr.homework.R;
 import com.example.aqr.homework.dao.GameDao;
 import com.example.aqr.homework.tool.GameOverManager;
 import com.example.aqr.homework.tool.FiveAIByAqr;
+import com.example.aqr.homework.tool.PointGrade;
 
 
 import java.util.ArrayList;
@@ -53,12 +54,12 @@ public class FiveInaRowView extends View implements DialogInterface.OnClickListe
     private boolean isWhite = false;
     private boolean isGameOver = false;
     private boolean isWhiteWin = false;
+    private boolean isStartGame = false;
 
     private Paint mPaint = new Paint();
 
     private GameOverManager gameOverManager = new GameOverManager();
     private FiveAIByAqr fiveAIByAqr = new FiveAIByAqr();
-    // private GameDao gameDao = new GameDao();
     AlertDialog.Builder gameOverDialog = new AlertDialog.Builder(getContext());
 
     public FiveInaRowView(Context context) {
@@ -87,18 +88,50 @@ public class FiveInaRowView extends View implements DialogInterface.OnClickListe
         mWhiteStone = BitmapFactory.decodeResource(getResources(), R.drawable.ic_stone_white);
         mBlackStone = BitmapFactory.decodeResource(getResources(), R.drawable.ic_stone_black);
         initFreePoint();
+        new Thread() {
+            @Override
+            public void run() {
+
+                while (true) {
+                    try {
+                        sleep(100);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    try {
+                        if(isStartGame) {
+                            Message msg = new Message();
+                            msg.what = 0;
+                            msg.arg1 = downBlackPoint.size();
+                            MainActivity.handler.sendMessage(msg);
+                        }
+
+                    } catch (IllegalStateException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+        }.start();
 
 
     }
 
-    public void initOldGame(ArrayList<Point> downWhitePoint, ArrayList<Point> downBlackPoint, ArrayList<Point> freePoints) {
+    public void initOldGame(ArrayList<Point> downWhitePoint, ArrayList<Point> downBlackPoint) {
         this.downWhitePoint.clear();
         this.downWhitePoint.addAll(downWhitePoint);
         this.downBlackPoint.clear();
-        this.downBlackPoint.addAll(downWhitePoint);
+        this.downBlackPoint.addAll(downBlackPoint);
         this.freePoint.clear();
-        this.freePoint.addAll(freePoints);
+        initFreePoint();
+        for(Point bp: downBlackPoint){
+            freePoint.remove(bp);
+        }
+        for(Point wp: downWhitePoint){
+            freePoint.remove(wp);
+        }
         invalidate();
+
 
     }
 
@@ -110,7 +143,9 @@ public class FiveInaRowView extends View implements DialogInterface.OnClickListe
         isGameOver = false;
         isWhiteWin = false;
         isWhite = false;
+        isStartGame = false;
         invalidate();
+        MainActivity.handler.sendEmptyMessage(2);
     }
 
     public void initFreePoint() {
@@ -184,13 +219,14 @@ public class FiveInaRowView extends View implements DialogInterface.OnClickListe
                 return false;
 
             }
+
             freePoint.remove(p);
             downBlackPoint.add(p);
 
             //downWhitePoint.add(fiveInRowAI.doAI(downWhitePoint,downBlackPoint,freePoint));
 
-
             invalidate();
+            isStartGame = true;
             isWhite = !isWhite;
 
         }
@@ -279,16 +315,25 @@ public class FiveInaRowView extends View implements DialogInterface.OnClickListe
 
     @Override
     public void onClick(DialogInterface dialog, int which) {
+        Message msg;
         switch (which) {
             case -1:
+                if(!isWhiteWin) {
+                    msg = new Message();
+                    msg.what = 1;
+                    msg.arg1 = downBlackPoint.size();
+                    MainActivity.handler.sendMessage(msg);
+                }
                 refresh();
                 dialog.dismiss();
                 break;
             case -2:
-                Message msg = new Message();
-                msg.what = 0;
-                msg.arg1 = downBlackPoint.size();
-                MainActivity.handler.sendMessage(msg);
+                if(!isWhiteWin) {
+                    msg = new Message();
+                    msg.what = 1;
+                    msg.arg1 = downBlackPoint.size();
+                    MainActivity.handler.sendMessage(msg);
+                }
                 refresh();
                 MainActivity.gameFlipper.setDisplayedChild(0);
                 dialog.dismiss();

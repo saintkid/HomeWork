@@ -10,7 +10,10 @@ public class SaveGame extends BmobObject {
     private int xPoint;
     private int yPoint;
     private int type;
+    private int time;
     private String name;
+    private String gameName;
+
 
     public SaveGame(){
 
@@ -46,5 +49,21 @@ public class SaveGame extends BmobObject {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getGameName() {
+        return gameName;
+    }
+
+    public void setGameName(String gameName) {
+        this.gameName = gameName;
+    }
+
+    public int getTime() {
+        return time;
+    }
+
+    public void setTime(int time) {
+        this.time = time;
     }
 }

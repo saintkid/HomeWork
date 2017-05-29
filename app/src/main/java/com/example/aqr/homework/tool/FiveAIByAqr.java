@@ -176,7 +176,12 @@ public class FiveAIByAqr {
         for (int i = 0; i < finalBestPoints.size(); i++)
             Log.d("TestfinalBest", "BestGrade: " + finalBestPoints.get(i).maxPointGrade + "\t" + "AIPoint: " + finalBestPoints.get(i).bestPoint);
 
-        Collections.sort(finalBestPoints);
+        try {
+            Collections.sort(finalBestPoints);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
+
         for (int i = 0; i < finalBestPoints.size(); i++)
             Log.d("TestfinalBest", "BestGrade: " + finalBestPoints.get(i).maxPointGrade + "\t" + "AIPoint: " + finalBestPoints.get(i).bestPoint);
         return finalBestPoints.get(0).bestPoint;
