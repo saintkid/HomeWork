@@ -26,49 +26,56 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
+
         >
 
-        <TableRow android:gravity="center">
+        <TableRow  style="@style/TableRowStyle">
 
             <Button
                 android:id="@+id/newGame"
                 android:text="新游戏"
+                android:background="@drawable/button_shap"
+
 
                 />
         </TableRow>
 
-        <TableRow android:gravity="center">
+        <TableRow  style="@style/TableRowStyle">
 
             <Button
                 android:id="@+id/oldGame"
                 android:text="保存的游戏"
+                android:background="@drawable/button_shap"
 
                 />
         </TableRow>
 
-        <TableRow android:gravity="center">
+        <TableRow  style="@style/TableRowStyle">
 
             <Button
                 android:id="@+id/gameBoard"
                 android:text="榜单"
+                android:background="@drawable/button_shap"
 
                 />
         </TableRow>
 
-        <TableRow android:gravity="center">
+        <TableRow  style="@style/TableRowStyle">
 
             <Button
                 android:id="@+id/setting"
-                android:text="设置"
+                android:text="音效设置"
+                android:background="@drawable/button_shap"
 
                 />
         </TableRow>
 
-        <TableRow android:gravity="center">
+        <TableRow  style="@style/TableRowStyle">
 
             <Button
                 android:id="@+id/quitAPP"
                 android:text="退出"
+                android:background="@drawable/button_shap"
 
                 />
         </TableRow>

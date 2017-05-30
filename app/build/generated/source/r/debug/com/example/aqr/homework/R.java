@@ -8,6 +8,9 @@
 package com.example.aqr.homework;
 
 public final class R {
+    public static final class array {
+        public static final int audio_on=0x7f060000;
+    }
     public static final class attr {
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -458,10 +461,15 @@ containing a value of this type.
         public static final int layout_optimizationLevel=0x7f01002b;
     }
     public static final class color {
-        public static final int colorAccent=0x7f050000;
-        public static final int colorChess=0x7f050001;
-        public static final int colorPrimary=0x7f050002;
-        public static final int colorPrimaryDark=0x7f050003;
+        public static final int cloorChessCenter=0x7f070000;
+        public static final int colorAccent=0x7f070001;
+        public static final int colorChess=0x7f070002;
+        public static final int colorPrimary=0x7f070003;
+        public static final int colorPrimaryDark=0x7f070004;
+    }
+    public static final class dimen {
+        public static final int activity_horizontal_margin=0x7f080000;
+        public static final int activity_vertical_margin=0x7f080001;
     }
     public static final class drawable {
         public static final int bmob_update_btn_check_off_focused_holo_light=0x7f020000;
@@ -484,40 +492,42 @@ containing a value of this type.
         public static final int bmob_update_close_bg_tap=0x7f020011;
         public static final int bmob_update_dialog_bg=0x7f020012;
         public static final int bmob_update_wifi_disable=0x7f020013;
-        public static final int ic_bg=0x7f020014;
-        public static final int ic_stone_black=0x7f020015;
-        public static final int ic_stone_white=0x7f020016;
+        public static final int button_shap=0x7f020014;
+        public static final int ic_bg=0x7f020015;
+        public static final int ic_logo=0x7f020016;
+        public static final int ic_stone_black=0x7f020017;
+        public static final int ic_stone_white=0x7f020018;
     }
     public static final class id {
-        public static final int all=0x7f080005;
-        public static final int basic=0x7f080006;
-        public static final int bmob_update_content=0x7f080012;
-        public static final int bmob_update_id_cancel=0x7f080015;
-        public static final int bmob_update_id_check=0x7f080013;
-        public static final int bmob_update_id_close=0x7f080011;
-        public static final int bmob_update_id_ignore=0x7f080016;
-        public static final int bmob_update_id_ok=0x7f080014;
-        public static final int bmob_update_wifi_indicator=0x7f080010;
-        public static final int chains=0x7f080007;
-        public static final int fiveinrow=0x7f08001a;
-        public static final int gameBoard=0x7f08000d;
-        public static final int gameManager=0x7f08000a;
-        public static final int gameTime=0x7f08001b;
-        public static final int gameUser=0x7f080009;
-        public static final int moveNumbers=0x7f08001c;
-        public static final int newGame=0x7f08000b;
-        public static final int none=0x7f080008;
-        public static final int oldGame=0x7f08000c;
-        public static final int packed=0x7f080003;
-        public static final int parent=0x7f080000;
-        public static final int quitAPP=0x7f08000f;
-        public static final int quitGame=0x7f080018;
-        public static final int save=0x7f080019;
-        public static final int setting=0x7f08000e;
-        public static final int spread=0x7f080001;
-        public static final int spread_inside=0x7f080004;
-        public static final int toolbar=0x7f080017;
-        public static final int wrap=0x7f080002;
+        public static final int all=0x7f0b0005;
+        public static final int basic=0x7f0b0006;
+        public static final int bmob_update_content=0x7f0b0012;
+        public static final int bmob_update_id_cancel=0x7f0b0015;
+        public static final int bmob_update_id_check=0x7f0b0013;
+        public static final int bmob_update_id_close=0x7f0b0011;
+        public static final int bmob_update_id_ignore=0x7f0b0016;
+        public static final int bmob_update_id_ok=0x7f0b0014;
+        public static final int bmob_update_wifi_indicator=0x7f0b0010;
+        public static final int chains=0x7f0b0007;
+        public static final int fiveinrow=0x7f0b001a;
+        public static final int gameBoard=0x7f0b000d;
+        public static final int gameManager=0x7f0b000a;
+        public static final int gameTime=0x7f0b001b;
+        public static final int gameUser=0x7f0b0009;
+        public static final int moveNumbers=0x7f0b001c;
+        public static final int newGame=0x7f0b000b;
+        public static final int none=0x7f0b0008;
+        public static final int oldGame=0x7f0b000c;
+        public static final int packed=0x7f0b0003;
+        public static final int parent=0x7f0b0000;
+        public static final int quitAPP=0x7f0b000f;
+        public static final int quitGame=0x7f0b0018;
+        public static final int save=0x7f0b0019;
+        public static final int setting=0x7f0b000e;
+        public static final int spread=0x7f0b0001;
+        public static final int spread_inside=0x7f0b0004;
+        public static final int toolbar=0x7f0b0017;
+        public static final int wrap=0x7f0b0002;
     }
     public static final class layout {
         public static final int beforegame_main=0x7f040000;
@@ -530,40 +540,52 @@ containing a value of this type.
         public static final int ic_launcher_round=0x7f030001;
     }
     public static final class string {
-        public static final int BMAppUpdate=0x7f060000;
-        public static final int BMBreak_Network=0x7f060001;
-        public static final int BMDialog_InstallAPK=0x7f060002;
-        public static final int BMGprsCondition=0x7f060003;
-        public static final int BMIgnore=0x7f060004;
-        public static final int BMNewVersion=0x7f060005;
-        public static final int BMNotNow=0x7f060006;
-        public static final int BMTargetSize=0x7f060007;
-        public static final int BMToast_IsUpdating=0x7f060008;
-        public static final int BMUpdateCheck=0x7f060009;
-        public static final int BMUpdateContent=0x7f06000a;
-        public static final int BMUpdateNow=0x7f06000b;
-        public static final int BMUpdateSize=0x7f06000c;
-        public static final int BMUpdateTitle=0x7f06000d;
-        public static final int app_name=0x7f06000e;
-        public static final int bmob_common_action_cancel=0x7f06000f;
-        public static final int bmob_common_action_continue=0x7f060010;
-        public static final int bmob_common_action_info_exist=0x7f060011;
-        public static final int bmob_common_action_pause=0x7f060012;
-        public static final int bmob_common_download_failed=0x7f060013;
-        public static final int bmob_common_download_finish=0x7f060014;
-        public static final int bmob_common_download_notification_prefix=0x7f060015;
-        public static final int bmob_common_info_interrupt=0x7f060016;
-        public static final int bmob_common_network_break_alert=0x7f060017;
-        public static final int bmob_common_patch_finish=0x7f060018;
-        public static final int bmob_common_pause_notification_prefix=0x7f060019;
-        public static final int bmob_common_silent_download_finish=0x7f06001a;
-        public static final int bmob_common_start_download_notification=0x7f06001b;
-        public static final int bmob_common_start_patch_notification=0x7f06001c;
+        public static final int BMAppUpdate=0x7f090000;
+        public static final int BMBreak_Network=0x7f090001;
+        public static final int BMDialog_InstallAPK=0x7f090002;
+        public static final int BMGprsCondition=0x7f090003;
+        public static final int BMIgnore=0x7f090004;
+        public static final int BMNewVersion=0x7f090005;
+        public static final int BMNotNow=0x7f090006;
+        public static final int BMTargetSize=0x7f090007;
+        public static final int BMToast_IsUpdating=0x7f090008;
+        public static final int BMUpdateCheck=0x7f090009;
+        public static final int BMUpdateContent=0x7f09000a;
+        public static final int BMUpdateNow=0x7f09000b;
+        public static final int BMUpdateSize=0x7f09000c;
+        public static final int BMUpdateTitle=0x7f09000d;
+        public static final int app_name=0x7f09000e;
+        public static final int audio_setting=0x7f09000f;
+        public static final int background=0x7f090010;
+        public static final int bmob_common_action_cancel=0x7f090011;
+        public static final int bmob_common_action_continue=0x7f090012;
+        public static final int bmob_common_action_info_exist=0x7f090013;
+        public static final int bmob_common_action_pause=0x7f090014;
+        public static final int bmob_common_download_failed=0x7f090015;
+        public static final int bmob_common_download_finish=0x7f090016;
+        public static final int bmob_common_download_notification_prefix=0x7f090017;
+        public static final int bmob_common_info_interrupt=0x7f090018;
+        public static final int bmob_common_network_break_alert=0x7f090019;
+        public static final int bmob_common_patch_finish=0x7f09001a;
+        public static final int bmob_common_pause_notification_prefix=0x7f09001b;
+        public static final int bmob_common_silent_download_finish=0x7f09001c;
+        public static final int bmob_common_start_download_notification=0x7f09001d;
+        public static final int bmob_common_start_patch_notification=0x7f09001e;
+        public static final int chess=0x7f09001f;
+        public static final int defeat=0x7f090020;
+        public static final int user=0x7f090021;
+        public static final int user_dialog=0x7f090022;
+        public static final int user_summary=0x7f090023;
+        public static final int win=0x7f090024;
     }
     public static final class style {
         /**  Customize your theme here. 
          */
-        public static final int AppTheme=0x7f070000;
+        public static final int AppTheme=0x7f0a0000;
+        public static final int TableRowStyle=0x7f0a0001;
+    }
+    public static final class xml {
+        public static final int preference=0x7f050000;
     }
     public static final class styleable {
         /** Attributes that can be used with a ConstraintLayout_Layout.

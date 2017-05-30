@@ -3,11 +3,14 @@ package com.example.aqr.homework.view;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Point;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Message;
 import android.os.Parcelable;
@@ -24,6 +27,7 @@ import com.example.aqr.homework.tool.FiveAIByAqr;
 import com.example.aqr.homework.tool.PointGrade;
 
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 
@@ -51,6 +55,7 @@ public class FiveInaRowView extends View implements DialogInterface.OnClickListe
     public ArrayList<Point> downBlackPoint = new ArrayList<>();
     public ArrayList<Point> freePoint = new ArrayList<>();
 
+
     private boolean isWhite = false;
     private boolean isGameOver = false;
     private boolean isWhiteWin = false;
@@ -58,9 +63,13 @@ public class FiveInaRowView extends View implements DialogInterface.OnClickListe
 
     private Paint mPaint = new Paint();
 
+    //private MediaPlayer mediaPlayer = new MediaPlayer();
     private GameOverManager gameOverManager = new GameOverManager();
     private FiveAIByAqr fiveAIByAqr = new FiveAIByAqr();
     AlertDialog.Builder gameOverDialog = new AlertDialog.Builder(getContext());
+   public MediaPlayer mediaPlayerWin = null;
+   public MediaPlayer mediaPlayerDefeat = null;
+   public MediaPlayer mediaPlayerChess = null;
 
     public FiveInaRowView(Context context) {
         super(context);
@@ -87,6 +96,27 @@ public class FiveInaRowView extends View implements DialogInterface.OnClickListe
         mPaint.setStyle(Paint.Style.STROKE);
         mWhiteStone = BitmapFactory.decodeResource(getResources(), R.drawable.ic_stone_white);
         mBlackStone = BitmapFactory.decodeResource(getResources(), R.drawable.ic_stone_black);
+        AssetManager assetManager = getContext().getAssets();
+        try {
+            AssetFileDescriptor win = assetManager.openFd("win.mp3");
+            mediaPlayerWin = new MediaPlayer();
+            mediaPlayerWin.setDataSource(win.getFileDescriptor(), win.getStartOffset(), win.getLength());
+            mediaPlayerWin.prepare();
+
+            AssetFileDescriptor defeat = assetManager.openFd("defeat.mp3");
+            mediaPlayerDefeat = new MediaPlayer();
+            mediaPlayerDefeat.setDataSource(defeat.getFileDescriptor(), defeat.getStartOffset(), defeat.getLength());
+            mediaPlayerDefeat.prepare();
+
+            AssetFileDescriptor chess = assetManager.openFd("chess.mp3");
+            mediaPlayerChess = new MediaPlayer();
+            mediaPlayerChess.setDataSource(chess.getFileDescriptor(), chess.getStartOffset(), chess.getLength());
+            mediaPlayerChess.prepare();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+
         initFreePoint();
         new Thread() {
             @Override
@@ -168,7 +198,6 @@ public class FiveInaRowView extends View implements DialogInterface.OnClickListe
         } else if (isWhite && !isGameOver) {
             fiveAIByAqr.setParams(downWhitePoint, downBlackPoint, freePoint);
             Point point = fiveAIByAqr.getBestPoint();
-            // Point point = fiveInRowAI.doAI(downWhitePoint,downBlackPoint,freePoint);
             downWhitePoint.add(point);
             freePoint.remove(point);
             invalidate();
@@ -240,13 +269,29 @@ public class FiveInaRowView extends View implements DialogInterface.OnClickListe
         super.onDraw(canvas);
         drawBroad(canvas);
         drawStone(canvas);
+        if(MainActivity.isChess){
+            mediaPlayerChess.seekTo(0);
+            mediaPlayerChess.start();
+        }
         checkGameOver();
         if (isGameOver) {
 
 
             gameOverDialog.setCancelable(false);
-            if (isWhiteWin) gameOverDialog.setTitle("你输了");
-            else gameOverDialog.setTitle("你赢了");
+            if (isWhiteWin) {
+               if(MainActivity.isDefeat) {
+                   mediaPlayerDefeat.seekTo(0);
+                   mediaPlayerDefeat.start();
+               }
+                gameOverDialog.setTitle("你输了");
+            }
+            else {
+                if(MainActivity.isWin) {
+                    mediaPlayerWin.seekTo(0);
+                    mediaPlayerWin.start();
+                }
+                gameOverDialog.setTitle("你赢了");
+            }
             gameOverDialog.setNegativeButton("结束", this);
             gameOverDialog.setPositiveButton("再来一局", this);
 
@@ -325,6 +370,9 @@ public class FiveInaRowView extends View implements DialogInterface.OnClickListe
                     msg.arg1 = downBlackPoint.size();
                     MainActivity.handler.sendMessage(msg);
                 }
+                if(mediaPlayerDefeat.isPlaying()) mediaPlayerDefeat.pause();
+                if(mediaPlayerWin.isPlaying()) mediaPlayerWin.pause();
+
                 refresh();
                 dialog.dismiss();
                 break;
@@ -335,6 +383,8 @@ public class FiveInaRowView extends View implements DialogInterface.OnClickListe
                     msg.arg1 = downBlackPoint.size();
                     MainActivity.handler.sendMessage(msg);
                 }
+                if(mediaPlayerDefeat.isPlaying()) mediaPlayerDefeat.pause();
+                if(mediaPlayerWin.isPlaying()) mediaPlayerWin.pause();
                 refresh();
                 MainActivity.gameFlipper.setDisplayedChild(0);
 

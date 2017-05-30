@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <PreferenceCategory
+        >
+        <EditTextPreference
+            android:key="user"
+            android:title="@string/user"
+            android:summary="@string/user_summary"
+            android:dialogTitle="@string/user_dialog"
+            />
+        <CheckBoxPreference
+            android:key="chess"
+            android:title="@string/chess"
+            android:summaryOn="开启"
+            android:summaryOff="关闭"
+            android:defaultValue="true"
+            />
+        <CheckBoxPreference
+            android:key="win"
+            android:title="@string/win"
+            android:summaryOn="开启"
+            android:summaryOff="关闭"
+            android:defaultValue="true"
+            />
+        <CheckBoxPreference
+            android:key="defeat"
+            android:title="@string/defeat"
+            android:summaryOn="开启"
+            android:summaryOff="关闭"
+            android:defaultValue="true"
+            />
+        <CheckBoxPreference
+
+            android:key="bg"
+            android:title="@string/background"
+            android:summaryOn="开启"
+            android:summaryOff="关闭"
+            android:defaultValue="true"
+            />
+
+    </PreferenceCategory>
+
+
+
+
+
+</PreferenceScreen>

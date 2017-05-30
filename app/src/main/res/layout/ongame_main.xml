@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:background="@drawable/button_shap"
         />
     <Button
         android:text="保存"
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
+        android:background="@drawable/button_shap"
         />
 
     <com.example.aqr.homework.view.FiveInaRowView
@@ -38,15 +40,18 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
+        android:textColor="@color/colorChess"
 
         />
     <TextView
+
         android:text="落子数：000"
         android:id="@+id/moveNumbers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:textColor="@color/colorChess"
         />
 
 </RelativeLayout>

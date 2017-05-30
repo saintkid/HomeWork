@@ -20,6 +20,11 @@
     <!-- 允许读取手机状态 用于创建BmobInstallation -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -34,6 +39,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.aqr.homework.BaseActivity" />
+        <activity
+            android:name="com.example.aqr.homework.SettingActivity"
+            android:label="@string/audio_setting"
+            android:theme="@android:style/Theme.Material.Dialog" />
 
         <provider
             android:name="com.android.tools.fd.runtime.InstantRunContentProvider"

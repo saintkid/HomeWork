@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">HomeWork</string>
+    <string name="app_name">人机五子棋</string>
+    <string name="audio_setting">音效设置</string>
+    <string name="chess">落子提示音</string>
+    <string name="win">胜利提示音</string>
+    <string name="defeat">失败提示音</string>
+    <string name="background">背景音乐</string>
+    <string name="user">用户名</string>
+    <string name="user_summary">填写您的用户名</string>
+    <string name="user_dialog">您所使用的用户名为： </string>
+
+
+
 </resources>

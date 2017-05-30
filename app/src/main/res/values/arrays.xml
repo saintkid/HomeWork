@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="audio_on">
+        <item>落子提示音</item>
+        <item>胜利提示音</item>
+        <item>失败提示音</item>
+        <item>背景音乐</item>
+    </string-array>
+</resources>
